@@ -1,0 +1,47 @@
+.banner-off{
+    height: 100px;
+    width: 100%;
+    background-color: nth($list: $colores, $n:2 );
+    font-size: 2rem;
+    font-weight: regular 400;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-index{
+    .carrousel-imagen{
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
+    .texto-carrousel{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 3.5rem;
+        color: #fff;
+        font-weight: bold;
+    }
+    .titulo{
+        font-size: 1.5rem;
+        padding: 16px;
+        text-align: center;
+    }
+    .card-destacado{
+        box-shadow: 2px 4px 10px 0 #aea89c;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: start;
+        p{
+            margin-top: 8px;
+            color: #090908;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    }
+}

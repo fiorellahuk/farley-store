@@ -1,0 +1,66 @@
+.main-verano{
+    .catalogo{
+        margin: 18px auto 10px auto;
+        padding-left: 16px;
+        .subtitulo{
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            padding-top: 18px;
+            h1{
+                font-size: 3rem;
+                font-weight: lighter;
+                padding: 0.5rem;
+            }
+            h2{
+                font-size: 2rem;
+                font-weight: lighter;
+                color: #dac2cf;
+                padding-left: 1rem;
+            }
+            }
+        }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        .card-producto{
+            width: 300px;
+            height: auto;
+            border: 2px solid #dbcfc3;
+            box-shadow: 2px 4px 10px 0 #aea89c;
+            border-radius: 10%;
+            margin: 20px;
+            .img-producto{
+                height: 70%;
+                width: 100%;
+                border: 1px solid #dbcfc3;
+                box-shadow: 2px 4px 10px 0 #aea89c;
+                border-radius: 10%;
+            }
+            div{
+                h3{
+                    text-align: center;
+                }
+                p{
+                    padding-top: 16px;
+                    font-size: 1rem;
+                    text-align: center;
+                    font-weight: regular 400;
+                }
+                a{
+                    padding-top: 16px;
+                    font-size: 1rem;
+                    text-align: center;
+                    text-decoration: none;
+                    color: #040404;
+                    img{
+                        margin-left: 18px;
+                        height: 40px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

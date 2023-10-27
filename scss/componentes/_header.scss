@@ -1,0 +1,38 @@
+header{
+    background-color: nth($list: $colores, $n:4 );
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    a{
+        img{
+            width: 70px;
+            border: 0.5px solid rgb(31, 30, 30);
+            border-radius: 50%;
+        }
+    }
+    nav{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            column-gap: 10px;
+            li{
+                a{
+                    text-decoration: none;
+                    color: #090908;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    background-color: #dac2cf;
+                    border-radius: 5px;
+                    box-shadow: 2px 4px 10px 0 #aea89c;
+                    padding: 7px;
+                }
+            }
+        }
+    }
+}
