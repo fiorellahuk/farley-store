@@ -5,21 +5,21 @@
         text-align: center;
     }
     .cards-ubicacion{
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        grid-template-rows: 2fr 2fr;
-        column-gap: 25px;
-        row-gap: 12px;
-        margin-left: 150px;
+        @include grid (2fr 2fr, 2fr 2fr, 25px, 12px);
+        margin-left: 100px;
         margin-bottom: 100px;
     }
     .card-ubicacion{
         height: 360px;
         width: 360px;
-        @include flex(comlumn, center,space-evenly);
-        border: thick double #e0c9bccd;
-        box-shadow: 2px 4px 10px 0 #aea89c;
+        @include flex(column, center,space-evenly);
+        border: thick double nth($list: $colores, $n:3 );
+        box-shadow: 2px 4px 10px 0 nth($list: $colores, $n:6 );
         font-size: 1.5rem;
         text-align: center;
+    }
+    .iframe{
+        top: 80px;
+        margin-bottom: 80px;
     }
 }

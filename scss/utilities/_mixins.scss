@@ -6,9 +6,15 @@
 }
 
 @mixin grid($grid-template-columns, $grid-template-rows, $column-gap, $row-gap){
-    gisplay: grid;
+    display: grid;
     grid-template-columns: $grid-template-columns;
     grid-template-rows: $grid-template-rows;
     column-gap: $column-gap;
     row-gap: $row-gap;
+}
+
+@mixin flex-wrap($flex-direction, $flex-wrap){
+    display: flex;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
 }

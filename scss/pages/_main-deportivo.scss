@@ -16,29 +16,25 @@
             h2{
                 font-size: 2rem;
                 font-weight: lighter;
-                color: #dac2cf;
+                color: nth($list: $colores, $n:4 );
                 padding-left: 1rem;
             }
             }
         }
     .cards{
-        display: flex;
-        flex-wrap: wrap;
+        @include grid (1fr 1fr 1fr, 2fr, 8px, 10px);
         .card-producto{
             width: 300px;
             height: auto;
-            border: 2px solid #dbcfc3;
             box-shadow: 2px 4px 10px 0 #aea89c;
-            border-radius: 10%;
-            margin: 20px;
-            .img-producto{
+            margin-bottom: 50px;
+            margin-left: 20px;
+            img{
                 height: 70%;
                 width: 100%;
-                border: 1px solid #dbcfc3;
-                box-shadow: 2px 4px 10px 0 #aea89c;
-                border-radius: 10%;
             }
             div{
+                @include flex(column, center, center);
                 h3{
                     text-align: center;
                 }
@@ -46,17 +42,14 @@
                     padding-top: 16px;
                     font-size: 1.5rem;
                     text-align: center;
-                    font-weight: regular 400;
+                    font-weight: 400;
                 }
                 a{
-                    padding-top: 16px;
-                    font-size: 1rem;
-                    text-align: center;
+                    font-size: 1.4rem;
                     text-decoration: none;
-                    color: #040404;
+                    color:nth($list: $colores, $n:8 );
                     img{
-                        margin-left: 18px;
-                        height: 40px;
+                        height: 50px;
                         width: 30px;
                     }
                 }

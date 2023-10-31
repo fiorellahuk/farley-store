@@ -1,6 +1,6 @@
 header{
-    background-color: nth($list: $colores, $n:4 );
-    position: sticky;
+    background-color: nth($list: $colores, $n:2 );
+    position: static;
     top: 0;
     z-index: 1;
     display: flex;
@@ -11,7 +11,6 @@ header{
     a{
         img{
             width: 70px;
-            border: 0.5px solid rgb(31, 30, 30);
             border-radius: 50%;
         }
     }
@@ -24,13 +23,20 @@ header{
             li{
                 a{
                     text-decoration: none;
-                    color: #090908;
+                    color: nth($list: $colores, $n:8 );
                     font-size: 1.5rem;
                     text-transform: uppercase;
-                    background-color: #dac2cf;
+                    background-color: nth($list: $colores, $n:3 );
                     border-radius: 5px;
                     box-shadow: 2px 4px 10px 0 #aea89c;
                     padding: 7px;
+                    &:hover{
+                        color: nth($list: $colores, $n:7 );
+                        box-shadow: 5px 5px 10px nth($list: $colores, $n:5 );
+                    }
+                    &:active{
+                        color: nth($list: $colores, $n:8 );
+                    }
                 }
             }
         }
