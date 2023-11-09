@@ -96,27 +96,34 @@
         }
     }
     .row-reverse{
+        background-color: nth($list: $colores, $n:5 );
         .contenedor-card{
             margin: 3em;
-            height: 100px;
+            height: 130px;
             &:nth-child(odd){
                 display: flex;
+                align-items: center;
+                justify-content: start;
             }
             &:nth-child(even){
                 display: flex;
                 flex-direction: row-reverse;
+                align-items: center;
+                justify-content: end;
             }
             .card{
-                //border: none;
+                background-color: nth($list: $colores, $n:5 );
+                border: none;
                 img{
-                    height: 100%;
+                    height: 120px;
                     width: 80px;
                     border-radius: 50%;
                 }
                 p{
                     font-size: 1.5rem;
                     color: nth($list: $colores, $n:8 );
-                    text-align: justify;
+                    text-align: center;
+                    padding: 15px;
                 }
             }
         }

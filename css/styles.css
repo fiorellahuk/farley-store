@@ -11,6 +11,23 @@ html {
   font-family: "Teko", sans-serif;
 }
 
+@media only screen and (max-width: 768px) {
+  header {
+    justify-content: space-around;
+  }
+  header label {
+    display: block;
+  }
+  header img {
+    width: 20px;
+  }
+  .main-deportivo .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 header {
   background-color: #d3e3d6;
   position: static;
@@ -21,6 +38,15 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+}
+header #btn-menu {
+  display: none;
+}
+header label {
+  display: none;
+}
+header label:hover {
+  cursor: pointer;
 }
 header a img {
   width: 70px;
@@ -84,8 +110,8 @@ header nav ul li a:active {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 2em;
-  row-gap: 2em;
+  column-gap: 10px;
+  row-gap: 10px;
   margin: 2em;
 }
 .main-index .cards-index .cards-item {
@@ -107,6 +133,7 @@ header nav ul li a:active {
 .main-index .cards-index .cards-item a img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .main-index .titulo-index {
   font-size: 1.5rem;
@@ -381,26 +408,38 @@ header nav ul li a:active {
   text-decoration: none;
   padding: 25px;
 }
+.main-contacto .row-reverse {
+  background-color: rgba(218, 194, 207, 0.8078431373);
+}
 .main-contacto .row-reverse .contenedor-card {
   margin: 3em;
-  height: 100px;
+  height: 130px;
 }
 .main-contacto .row-reverse .contenedor-card:nth-child(odd) {
   display: flex;
+  align-items: center;
+  justify-content: start;
 }
 .main-contacto .row-reverse .contenedor-card:nth-child(even) {
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
+  justify-content: end;
+}
+.main-contacto .row-reverse .contenedor-card .card {
+  background-color: rgba(218, 194, 207, 0.8078431373);
+  border: none;
 }
 .main-contacto .row-reverse .contenedor-card .card img {
-  height: 100%;
+  height: 120px;
   width: 80px;
   border-radius: 50%;
 }
 .main-contacto .row-reverse .contenedor-card .card p {
   font-size: 1.5rem;
   color: black;
-  text-align: justify;
+  text-align: center;
+  padding: 15px;
 }
 
 footer {

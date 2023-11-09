@@ -1,0 +1,19 @@
+@media only screen and (max-width: 768px){
+    header{
+        justify-content: space-around;
+        label{
+            display: block;
+        }
+        img{
+            width: 20px;
+        }
+    }
+    .main-deportivo{
+        .cards{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
