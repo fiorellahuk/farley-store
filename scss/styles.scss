@@ -10,8 +10,6 @@
 
 @import "utilities/mixins";
 
-@import "utilities/media-queries";
-
 @import "componentes/header";
 
 @import "pages/main-index";
@@ -25,3 +23,5 @@
 @import "pages/main-contacto";
 
 @import "componentes/footer";
+
+@import "utilities/media-queries";

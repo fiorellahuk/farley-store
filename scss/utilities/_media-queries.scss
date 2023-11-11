@@ -1,19 +1,136 @@
-@media only screen and (max-width: 768px){
+@media screen and (max-width: 768px){
     header{
-        justify-content: space-around;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #btn-menu{
+            &:checked~.menu{
+                visibility: visible;
+            }
+        }
         label{
             display: block;
+            position: relative;
+            img{
+                width: 50px;
+            }
         }
-        img{
-            width: 20px;
+        .menu{
+            position: absolute;
+            top: 70px;
+            visibility: hidden;
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                z-index: 10;
+                position: relative;
+            }
         }
+        a{
+            .logo{
+                width: 80px;
+                display: block;
+            }
+        }
+    }
+    .main-index{
+        .banner-off{
+            display: none;
+        }
+        .carrousel{
+            .altura-carrousel{
+                height: 100%;
+                .carrousel-imagen{
+                    .texto-carrousel{
+                        font-size: 1.5rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .cards-index{
+            .cards-item{
+                p{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    .main-ubicaciones{
+        .cards-ubicacion{
+            @include grid(1fr , repeat(4, 1fr), 1em, 1em);
+            margin: 0;
+            .card-ubicacion{
+                height: 35vh;
+                width: 250px;
+            }
+        }
+    }
+    .main-contacto{
+        .formulario{
+            height: 70vh;
+            .form{
+                .label{
+                    font-size: 1.5rem;
+                }
+                .input{
+                    width: 200px;
+                }
+            }
+        }
+        .row-reverse{
+            height: 80vh;
+            padding: 10px;
+            .card{
+                width: auto;
+                img{
+                    width: 50px;
+                }
+            }
+            .texto{
+                width: 70%;
+            }
+        }
+    }
+    footer{
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    header{
+        justify-content: space-around;
     }
     .main-deportivo{
         .cards{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flex(column, center, center)
+        }
+    }
+    .main-verano{
+        .cards{
+            @include flex(column, center, center)
+        }
+    }
+    .main-ubicaciones{
+        .cards-ubicacion{
+            @include grid (repeat(2, 1fr), repeat(2,1fr), 1em, 1em);
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+    }
+    .main-contacto{
+        .formulario{
+            form{
+                height: 50vh;
+                margin: 0;
+                gap: 3em;
+            }
+            .boton{
+                margin: 0;
+                top: 1em;
+            }
         }
     }
 }
+

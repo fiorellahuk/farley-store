@@ -6,6 +6,7 @@
     }
     .cards-ubicacion{
         @include grid (2fr 2fr, 2fr 2fr, 25px, 12px);
+        justify-items: center;
         margin-left: 100px;
         margin-bottom: 100px;
     }

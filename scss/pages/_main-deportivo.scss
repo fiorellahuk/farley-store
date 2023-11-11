@@ -23,6 +23,8 @@
         }
     .cards{
         @include grid (1fr 1fr 1fr, 2fr, 8px, 10px);
+        align-items: center;
+        justify-items: center;
         .card-producto{
             width: 300px;
             height: auto;
@@ -48,6 +50,11 @@
                     font-size: 1.4rem;
                     text-decoration: none;
                     color:nth($list: $colores, $n:8 );
+                    border: nth($list: $colores, $n:8 );
+                    &:hover{
+                        background-color: nth($list: $colores, $n:5 );
+                        cursor: pointer;
+                    }
                     img{
                         height: 50px;
                         width: 30px;

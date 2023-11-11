@@ -11,23 +11,6 @@ html {
   font-family: "Teko", sans-serif;
 }
 
-@media only screen and (max-width: 768px) {
-  header {
-    justify-content: space-around;
-  }
-  header label {
-    display: block;
-  }
-  header img {
-    width: 20px;
-  }
-  .main-deportivo .cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
 header {
   background-color: #d3e3d6;
   position: static;
@@ -48,7 +31,7 @@ header label {
 header label:hover {
   cursor: pointer;
 }
-header a img {
+header a .logo {
   width: 70px;
   border-radius: 50%;
 }
@@ -120,6 +103,9 @@ header nav ul li a:active {
   align-items: center;
   justify-content: center;
 }
+.main-index .cards-index .cards-item:hover {
+  cursor: pointer;
+}
 .main-index .cards-index .cards-item p {
   position: absolute;
   font-size: 4rem;
@@ -169,6 +155,7 @@ header nav ul li a:active {
   grid-template-rows: 2fr 2fr;
   column-gap: 25px;
   row-gap: 12px;
+  justify-items: center;
   margin-left: 100px;
   margin-bottom: 100px;
 }
@@ -217,6 +204,8 @@ header nav ul li a:active {
   grid-template-rows: 2fr;
   column-gap: 8px;
   row-gap: 10px;
+  align-items: center;
+  justify-items: center;
 }
 .main-deportivo .cards .card-producto {
   width: 300px;
@@ -248,6 +237,11 @@ header nav ul li a:active {
   font-size: 1.4rem;
   text-decoration: none;
   color: black;
+  border: black;
+}
+.main-deportivo .cards .card-producto div a:hover {
+  background-color: rgba(218, 194, 207, 0.8078431373);
+  cursor: pointer;
 }
 .main-deportivo .cards .card-producto div a img {
   height: 50px;
@@ -277,8 +271,13 @@ header nav ul li a:active {
   padding-left: 1rem;
 }
 .main-verano .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr;
+  column-gap: 1em;
+  row-gap: 1em;
+  align-items: center;
+  justify-items: center;
 }
 .main-verano .cards .card-producto {
   width: 300px;
@@ -291,6 +290,12 @@ header nav ul li a:active {
   width: 100%;
   box-shadow: 2px 4px 10px 0 #aea89c;
 }
+.main-verano .cards .card-producto div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .main-verano .cards .card-producto div h3 {
   text-align: center;
 }
@@ -301,16 +306,17 @@ header nav ul li a:active {
   font-weight: 500;
 }
 .main-verano .cards .card-producto div a {
-  padding-top: 16px;
   font-size: 1.4rem;
-  text-align: center;
   text-decoration: none;
   color: black;
+  border: black;
+}
+.main-verano .cards .card-producto div a:hover {
+  background-color: rgba(218, 194, 207, 0.8078431373);
+  cursor: pointer;
 }
 .main-verano .cards .card-producto div a img {
-  margin-left: 18px;
-  margin-bottom: 100px;
-  height: 40px;
+  height: 50px;
   width: 30px;
 }
 
@@ -329,6 +335,8 @@ header nav ul li a:active {
 .main-contacto .formulario {
   height: 60vh;
   background-image: url(./../assets/fondo-contacto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main-contacto .formulario .titulo-contacto {
   margin: 15px;
@@ -346,8 +354,6 @@ header nav ul li a:active {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: baseline;
-  justify-content: center;
   gap: 60px;
 }
 .main-contacto .formulario form .filas label {
@@ -503,6 +509,125 @@ footer .redes {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header #btn-menu:checked ~ .menu {
+    visibility: visible;
+  }
+  header label {
+    display: block;
+    position: relative;
+  }
+  header label img {
+    width: 50px;
+  }
+  header .menu {
+    position: absolute;
+    top: 70px;
+    visibility: hidden;
+  }
+  header .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+    position: relative;
+  }
+  header a .logo {
+    width: 80px;
+    display: block;
+  }
+  .main-index .banner-off {
+    display: none;
+  }
+  .main-index .carrousel .altura-carrousel {
+    height: 100%;
+  }
+  .main-index .carrousel .altura-carrousel .carrousel-imagen .texto-carrousel {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .main-index .cards-index .cards-item p {
+    font-size: 2rem;
+  }
+  .main-ubicaciones .cards-ubicacion {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+    margin: 0;
+  }
+  .main-ubicaciones .cards-ubicacion .card-ubicacion {
+    height: 35vh;
+    width: 250px;
+  }
+  .main-contacto .formulario {
+    height: 70vh;
+  }
+  .main-contacto .formulario .form .label {
+    font-size: 1.5rem;
+  }
+  .main-contacto .formulario .form .input {
+    width: 200px;
+  }
+  .main-contacto .row-reverse {
+    height: 80vh;
+    padding: 10px;
+  }
+  .main-contacto .row-reverse .card {
+    width: auto;
+  }
+  .main-contacto .row-reverse .card img {
+    width: 50px;
+  }
+  .main-contacto .row-reverse .texto {
+    width: 70%;
+  }
+  footer {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header {
+    justify-content: space-around;
+  }
+  .main-deportivo .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-verano .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-ubicaciones .cards-ubicacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .main-contacto .formulario form {
+    height: 50vh;
+    margin: 0;
+    gap: 3em;
+  }
+  .main-contacto .formulario .boton {
+    margin: 0;
+    top: 1em;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -22,8 +22,9 @@
             }
         }
     .cards{
-        display: flex;
-        flex-wrap: wrap;
+        @include grid (repeat(3,1fr), 2fr, 1em , 1em);
+        align-items: center;
+        justify-items: center;
         .card-producto{
             width: 300px;
             height: auto;
@@ -35,6 +36,7 @@
                 box-shadow: 2px 4px 10px 0 #aea89c;
             }
             div{
+                @include flex(column, center, center);
                 h3{
                     text-align: center;
                 }
@@ -45,15 +47,16 @@
                     font-weight: 500;
                 }
                 a{
-                    padding-top: 16px;
                     font-size: 1.4rem;
-                    text-align: center;
                     text-decoration: none;
-                    color: nth($list: $colores, $n:8 );
+                    color:nth($list: $colores, $n:8 );
+                    border: nth($list: $colores, $n:8 );
+                    &:hover{
+                        background-color: nth($list: $colores, $n:5 );
+                        cursor: pointer;
+                    }
                     img{
-                        margin-left: 18px;
-                        margin-bottom: 100px;
-                        height: 40px;
+                        height: 50px;
                         width: 30px;
                     }
                 }
